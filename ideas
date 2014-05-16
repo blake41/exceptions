@@ -7,7 +7,7 @@ raise "hello" creates a RuntimeError with the message hello
 
 if you want to raise a custom error you must create a class that subclasses Exception
 
-class AnInformativeError < Exception
+class AnInformativeError < StandardError
 end
 
 raise AnInformativeError

@@ -16,8 +16,28 @@ dog2 = Dog.new("blake")
 array = [dog, dog2]
 
 array.each do |dog|
-  dog.first_name + dog.last_name
+  begin
+    dog.first_name + dog.last_name
+  rescue => e
+    binding.pry
+    e.message
+  end
 end
+binding.pry
+
+begin
+  some_travis_method
+  some_github_method
+rescue TravisError => e
+  puts e.message
+end
+
+
+
+
+
+
+
 # error object
 # backtrace
 # message
